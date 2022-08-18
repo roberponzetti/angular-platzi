@@ -7,8 +7,15 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  widthImg = 10;
   title = 'my-angular-store';
   habilitado = true;
+
+  register = {
+    name: '',
+    email: '',
+    password: '',
+  }
 
   person = {
     name: 'Robertino',
@@ -19,6 +26,12 @@ export class AppComponent {
   names: string[] = ['Rober', 'Mati', 'Gabi'];
 
   newName = '';
+
+  box = {
+    width: 100,
+    height: 100,
+    background: 'red'
+  }
 
   products: Product[] = [
     {
@@ -70,6 +83,10 @@ export class AppComponent {
 
   deleteName (index: number) {
     this.names.splice(index, 1);
+  }
+
+  onRegister(){
+
   }
 
 }
